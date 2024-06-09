@@ -1,6 +1,7 @@
 # Eten API Automation Tests
 
 This repository contains automated tests using pytest for the Eten API. The Eten API provides endpoints for food-related information.
+https://eten-ui.vercel.app/
 
 ## Getting Started
 
