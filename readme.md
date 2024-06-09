@@ -1,4 +1,4 @@
-# Eten API Automation Tests
+# Eten API Automation Tests & CICD Github Action
 
 This repository contains automated tests using pytest for the Eten API. The Eten API provides endpoints for food-related information.
 https://eten-ui.vercel.app/
