@@ -24,5 +24,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run pytest
-      run: pytest
+    - name: Download and setup ChromeDriver
+      run: |
+          CHROMEDRIVER_VERSION=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+          curl -L -o /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip
+          sudo unzip /tmp/chromedriver.zip -d /usr/local/bin/
+  
+
+    - name: Run backend tests
+      run: pytest tests/
+  
+    - name: Run frontend tests
+      run: pytest tests_ui/
